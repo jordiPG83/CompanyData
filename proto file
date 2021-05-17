@@ -1,0 +1,178 @@
+syntax = "proto3";
+
+option java_package = "com.garantibbva.peoplebasicdata.customerinformationbusiness.proto";
+option java_outer_classname = "CustomerInformationBusinessProto";
+
+message CustomerReadGrpcRequest {
+  int32 customerNum = 1;
+  int32 acceptableLatency = 2;
+  ServerData serverData = 3;
+  HeaderInfo headerInfo = 4;
+}
+
+message CustomerReadGrpcResponse {
+  CustomerRes customer = 1;
+  CommercialCustomer commercialCustomer = 2;
+  CommercialExtendedInfo commercialExtendedInfo = 3;
+  NonCommercialCustomer nonCommercialCustomer = 4;
+  NonCommercialExtendedInfo nonCommercialExtendedInfo = 5;
+  ListNonCommercialOtherCitizenship listNonCommercialOtherCitizenship = 6;
+  GenericInfoResponse infoResponse = 7;
+}
+
+message ServerData {
+  string userId = 1;
+  string referenceId = 2;
+}
+
+message HeaderInfo {
+  string command = 1;
+  string sourceProgramId = 2;
+  int32 unitNum = 3;
+  string channelCode = 4;
+  string moduleCode = 5;
+  string subModuleCode = 6;
+}
+
+message CustomerRes {
+  int32 customerNum = 1;
+  string customerType = 2;
+  string name = 3;
+  string surname = 4;
+  string shortName = 5;
+  string domesticInd = 6;
+  string firstContactDate = 7;
+  string createUserId = 8;
+  string instanceId = 9;
+  string updateUserId = 10;
+  string referenceId = 11;
+  string communicationLanguageTe = 12;
+  fixed64 taxNum = 13;
+  int32 jobCode = 14;
+  string statuCode = 15;
+  int32 legalStatuNum = 16;
+  string foundationDate = 17;
+  string programSourceId = 18;
+  string reevaluationDate = 19;
+  string settledCountryCode = 20;
+  int32 employeeCountNum = 21;
+  fixed64 employeeIdNum = 22;
+  int32 takasbankNum = 23;
+  string customerSubType = 24;
+  string lastRatingDate = 25;
+  int32 lastRatingGrade = 26;
+  string credibilityCode = 27;
+  string birthDate = 28;
+  string taxOfficeText = 29;
+  string customerSubType2 = 30;
+  double yieldAmount = 31;
+  string yieldDate = 32;
+  string yieldCurrencyCode = 33;
+  string scoringDate = 34;
+  int32 scoringGrade = 35;
+  string registrationDate = 36;
+  string registryOffice = 37;
+  string taxCountryCode = 38;
+  string legalCustType = 39;
+  string documentStatus = 40;
+  double totalAssetAmount = 41;
+  string assetCurrCode = 42;
+  string assetCurrDate = 43;
+  string deathDate = 44;
+  int32 secretCode = 45;
+  int32 createChannelNum = 46;
+  int32 updateChannelNum = 47;
+  int32 groupNum = 48;
+  string sskOfficeText = 49;
+  int32 jobType = 50;
+  int32 financialPeriodEndMont = 51;
+  string mersisId =52;
+}
+
+message CommercialCustomer {
+  int32 customerNum = 1;
+  fixed64 riskCentralisationNum = 2;
+  string publicPrivateInd = 3;
+  int32 publicPercentageNum = 4;
+  int32 marketPortionNum = 5;
+  string createUserId = 6;
+  string instanceId = 7;
+  string updateUserId = 8;
+  string referenceId = 9;
+  string qualityDocumentText = 10;
+  string qualityDocumentFirmTex = 11;
+  string tradeText = 12;
+  int32 firmWorkingDurationNum = 13;
+  string loanRelationDate = 14;
+  string associateCode = 15;
+  int32 operationFieldCode = 16;
+}
+
+message CommercialExtendedInfo {
+  string otherNationalityFirmNo = 1;
+  string otherNationalityLegalS = 2;
+  string originCountryCode = 3;
+}
+
+message NonCommercialCustomer {
+  int32 customerNum = 1;
+  string maidenhoodSurnameText = 2;
+  string fatherNameText = 3;
+  string motherNameText = 4;
+  string birthPlace = 5;
+  string sexCode = 6;
+  string citizenText = 7;
+  string socialSecurityAssociati = 8;
+  string socialSecurityIdText = 9;
+  string maritalStatusCode = 10;
+  string martialStatusChangeDat = 11;
+  string educationCode = 12;
+  string lastSchoolText = 13;
+  string jobStartDate = 14;
+  string akademicTitleCode = 15;
+  string createUserId = 16;
+  string instanceId = 17;
+  string updateUserId = 18;
+  string referenceId = 19;
+  int32 jobTitleCode = 20;
+  fixed64 mernisNum = 21;
+  int32 kidAccountNum = 22;
+  int32 birthPlaceCode = 23;
+  string workingCompanyNameText = 24;
+  int32 workingStyleCode = 25;
+  int32 activityCode = 26;
+  int32 titleCode = 27;
+  int32 jobCode = 28;
+  string graduationDate = 29;
+  int32 graduationTitleCode = 30;
+  string graduationTitleName = 31;
+  string inquiryDate = 32;
+  string birthCountryCode = 33;
+}
+
+message NonCommercialExtendedInfo {
+  string otherNationalityId = 1;
+}
+
+message ListNonCommercialOtherCitizenship {
+  string listSize = 1;
+  repeated NonCommercialOtherCitizenship list = 2;
+}
+
+message NonCommercialOtherCitizenship {
+  string otherCitizenship = 1;
+}
+
+message GenericInfoResponse {
+  int32 code = 1;
+  string cause = 2;
+  string message = 3;
+}
+
+service CustomerInformationBusinessGrpcService {
+  rpc getCustomerExtendedInfo (CustomerReadGrpcRequest) returns (CustomerReadGrpcResponse) {
+  }
+}
+
+
+
