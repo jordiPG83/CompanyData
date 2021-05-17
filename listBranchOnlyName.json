@@ -1,0 +1,86 @@
+{
+    "items": [
+        {
+            "referenceNumber": 1439,
+            "name": "ALAPLI"
+        },
+        {
+            "referenceNumber": 174,
+            "name": "ZONGULDAK"
+        },
+        {
+            "referenceNumber": 1479,
+            "name": "DEVREK"
+        },
+        {
+            "referenceNumber": 514,
+            "name": "KARABÜK"
+        },
+        {
+            "referenceNumber": 522,
+            "name": "DÜZCE"
+        },
+        {
+            "referenceNumber": 1575,
+            "name": "ZONGULDAK ÇARŞI"
+        },
+        {
+            "referenceNumber": 1587,
+            "name": "BOLU UYDU GRUP"
+        },
+        {
+            "referenceNumber": 429,
+            "name": "BARTIN"
+        },
+        {
+            "referenceNumber": 458,
+            "name": "KARADENİZ EREĞLİ"
+        },
+        {
+            "referenceNumber": 659,
+            "name": "GEREDE"
+        },
+        {
+            "referenceNumber": 674,
+            "name": "ZONGUDAK UYDU GRUP"
+        },
+        {
+            "referenceNumber": 30,
+            "name": "BOLU"
+        },
+        {
+            "referenceNumber": 1071,
+            "name": "BAĞLIK KDZ EREĞLİ"
+        },
+        {
+            "referenceNumber": 1003,
+            "name": "KASTAMONU"
+        },
+        {
+            "referenceNumber": 1152,
+            "name": "BOLU ÇARŞI"
+        },
+        {
+            "referenceNumber": 1159,
+            "name": "SAFRANBOLU"
+        },
+        {
+            "referenceNumber": 1171,
+            "name": "DÜZCE MEYDAN"
+        },
+        {
+            "referenceNumber": 1102,
+            "name": "ÇAYCUMA"
+        }
+    ],
+    "result": {
+        "guid": "12345678-1234-1234-1234-123456789012",
+        "returnCode": "1",
+        "messageText": "Success",
+        "code": "1",
+        "message": "Success",
+        "details": {
+            "guid": "12345678-1234-1234-1234-123456789012"
+        }
+    }
+}
